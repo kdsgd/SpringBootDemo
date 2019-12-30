@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>修改用户</title>
+</head>
+<body>
+
+<div style="width:800px;height:100%;margin-left:270px;">
+    <form action="/updatePage" method="post">
+           ID： <input  name="id" type="text"  readonly="readonly" th:value="${account.id}"/>
+        用户名： <input  name="name" type="username" th:value="${account.name}" />
+        密  码： <input  name="password" type="password" th:value="${account.password}" />
+        <button type="submit">提交</button>
+        <button ><a th:href="@{'/userList'}">返回</a></button>
+    </form>
+</div>
+
+</body>
+</html>
