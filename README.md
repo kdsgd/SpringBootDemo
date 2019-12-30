@@ -1,0 +1,3 @@
+# SpringBootDemo
+SpringBoot+Thymeleaf+Maven增删改查
+使用的是mysql的数据库，在application.yml中可以看到数据库配置
