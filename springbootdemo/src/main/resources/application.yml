@@ -1,12 +1,16 @@
 server:
   port: 8080
 
-#静态资源配置
-resources:
-  static-locations: classpath:static/
+##静态资源配置
+#resources:
+#  static-locations: classpath:/static/
 
 
 spring:
+  mvc:
+    static-path-pattern: /static/**
+  resources:
+    static-locations: classpath:/static,classpath:/public,classpath:/resources,classpath:/META-INF/resources
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/blog_database?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
@@ -14,18 +18,23 @@ spring:
     password: root
   thymeleaf:
     cache: false
-    mode: HTML5
-    encoding: UTF-8
+    servlet:
+      content-type: text/html
+    enabled: true
+    encoding: UTF-8   #指定编码格式
+    mode: HTML
+    prefix: classpath:/templates/   #指定页面路径
+    suffix: .html     #设置后缀
+
 
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: com.tbyf.demo.springbootdemo.model.Account
+  # 搜索指定包别名
+  type-aliases-package: com.tbyf.demo.springbootdemo.entity.**
 
 logging:
   level:
     com:
       example:
         mapper : debug
-
-

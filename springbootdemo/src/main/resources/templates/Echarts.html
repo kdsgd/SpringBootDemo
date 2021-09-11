@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/plugins/echarts/echarts-all.js"></script>
+</head>
+<body>
+<div id="main" style="width:1000px; height:600px"></div>
+</body>
+<script type="text/javascript">
+
+
+    var eclist = [] ;
+    var summary = [];  //放横坐标
+    var ids = []; //放纵坐标
+    console.log("赋值成功")
+    var myChart = echarts.init(document.getElementById('main'));
+    myChart.showLoading();
+    $.ajax({
+        type:"GET",
+        url:"/theEcharts",
+        dataType:"json",
+        async:false,
+        success:function (result) {
+
+            //请求成功时执行该函数内容，result即为服务器返回的json对象
+
+            eclist = result.ecData;
+
+            console.log("执行成功");
+            for (var i = 0; i < eclist.length; i++) {
+                summary.push(eclist[i].summary);
+                console.log("summary:"+i+" = "+summary)
+            }
+            for (var q = 0; q < eclist.length; q++) {
+                ids.push(eclist[q].id);
+                console.log("ids:"+i+" = "+ids)
+            }
+
+        },
+        error :function(errorMsg) {
+            alert("获取后台数据失败！");
+        }
+
+    })
+
+
+
+    var option = {
+        title:{text:"OHYS本周营收"},
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend:{
+            data:['id号']
+        },
+        xAxis:{
+            type:'category',
+            data:summary
+        },
+        yAxis:{type:'value'},
+        series:[
+            {
+                name: 'id号',
+                type: 'line',
+                data:ids
+            }
+        ]
+    };
+    myChart.hideLoading();
+    myChart.setOption(option,true);
+</script>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html  lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <title>OHYS</title>
+    <meta name="keywords" content="ESBConsole">
+    <meta name="description" content="ESBConsole">
+
+    <!--[if lt IE 9]>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <![endif]-->
+
+    <link href="../static/js/base-ui.js" rel="stylesheet"/>
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../static/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="../static/css/animate.css" rel="stylesheet"/>
+    <link href="../static/css/style.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="../static/img/favicon.ico" />
+    <script>
+        if(window.top!==window.self){window.top.location=window.location};
+    </script>
+</head>
+<body class="gray-bg">
+
+<div    class="middle-box text-center loginscreen   animated fadeInDown">
+    <div>
+        <div>
+            <h1 class="logo-name">GHS</h1>
+        </div>
+        <h3>欢迎使用OHYS</h3>
+
+        <form id="signupForm" class="m-t" role="form" method="post" action="index.html">
+            <div style="padding: 0;" class="form-group col-md-12">
+                <input type="text"  name="username" class="form-control" placeholder="用户名" />
+            </div>
+            <div style="padding: 0;" class="form-group col-md-12">
+                <input type="password" name="password" class="form-control" placeholder="密码"  />
+            </div>
+            <button id="btnSubmit" data-loading="正在登录，请稍后..." class="btn blue-bg full-width m-b">登 录</button>
+
+            <p class="text-muted text-center"> <a href="login.html#"><small>忘记密码？</small></a>
+            </p>
+
+        </form>
+    </div>
+</div>
+
+<!-- 全局js -->
+<script src="../static/js/jquery.min.js" ></script>
+<script src="../static/js/bootstrap.min.js" ></script>
+<!-- 验证插件 -->
+<script src="../static/js/plugins/validate/jquery.validate.min.js" ></script>
+<script src="../static/js/plugins/validate/messages_zh.min.js" ></script>
+<script src="../static/js/plugins/layer/layer.js" ></script>
+<script src="../static/js/plugins/blockUI/jquery.blockUI.js" ></script>
+<script src="../static/js/base-ui.js" ></script>
+<script src="../static/js/login.js" ></script>
+</body>
+</html>

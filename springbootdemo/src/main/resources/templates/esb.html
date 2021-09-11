@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="overflow-y: scroll; height: 477px;">
+    <div class="alert alert-success" role="alert"></div>
+    <form id="form1">
+        <table class="form">
+            <tbody>
+            <tr>
+                <th class="formTitle">
+                    潜在重复区间
+                    <span style="color: red">*</span>
+                </th>
+                <td class="formValue">
+                    <input>
+                    <span>-</span>
+                    <input>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <hr>
+                </td>
+            </tr>
+            <tr>
+                <td class="formTitle">字段权重值匹配</td>
+            </tr>
+            <tr>
+                <td colspan="4"><hr></td>
+            </tr>
+            <tr>
+                <td class="formTitle">姓名<span style="color: red">*</span></td>
+                <td class="formValue">
+                    <input id="NAME" name="NAME" type="text" class="form-control required" autocomplete="off">
+                </td>
+                <td class="formTitle">性别</td>
+                <td class="formValue"><input id="GENDER_NAME" name="GENDER_NAME" class="form-control" autocomplete="off"></td>
+            </tr>
+            <tr>
+                <td class="formTitle">身份证号码<span style="color: red">*</span></td>
+                <td class="formValue"><input id="ID_NO" class="form-control required" type="text" autocomplete="off"></td>
+            </tr>
+            <tr>
+                <td class="formTitle">病案号</td>
+                <td class="formValue">
+                    <input id="MEDICAL_RECORD_NO" name="MEDICAL_RECORD_NO" class="form-control" type="text" autocomplete="off">
+                </td>
+                <td class="formTitle">居民健康卡号</td>
+                <td class="formValue">
+                    <input id="HEALTH_CARD_NO" name="HEALTH_CARD_NO" class="form-control" type="text" autocomplete="off">
+                </td>
+            </tr>
+            <tr>
+                <td class="formTitle">本人电话号码</td>
+                <td class="formValue">
+                    <input id="PHONE_NO" name="PHONE_NO" type="text" class="form-control" autocomplete="off">
+                </td>
+                <td class="formTitle">出生日期</td>
+                <td class="formValue">
+                    <input id="DOB" name="DOB" type="text" class="form-control" autocomplete="off">
+                </td>
+            </tr>
+            <tr>
+                <td class="formTitle">医保卡号</td>
+                <td class="formValue">
+                    <input id="MEDICAL_INSURANCE_CARD_NO" name="MEDICAL_INSURANCE_CARD_NO" class="form-control" autocomplete="off">
+                </td>
+                <td class="formTitle">ABO血型名称</td>
+                <td class="formValue"><input id="ABO_BLOOD_TYPE_NAME" name="ABO_BLOOD_TYPE_NAME" class="form-control" autocomplete="off"></td>
+            </tr>
+            <tr>
+                <td class="formTitle">就诊卡号</td>
+                <td class="formValue"><input id="HOSPITAL_CARD_NO" name="HOSPITAL_CARD_NO" class="form-control" type="text" autocomplete="off"></td>
+                <td class="formTitle">门诊病案号</td>
+                <td class="formValue"><input id="OP_MEDICAL_RECORD_NO" class="form-control" autocomplete="off"></td>
+            </tr>
+            <tr>
+                <td class="formTitle">Rh血型名称</td>
+                <td class="formValue"> <input id="RH_BLOOD_TYPE_NAME" name="RH_BLOOD_TYPE_NAME" class="form-control" autocomplete="off"></td>
+                <td class="formTitle">国籍</td>
+                <td class="formValue"><input id="CITIZENSHIP_NAME" name="CITIZENSHIP_NAME" class="form-control" autocomplete="off"></td>
+            </tr>
+            <tr>
+                <td class="formTitle">民族</td>
+                <td class="formValue"><input id="ETHNIC_GROUP_NAME" name="ETHNIC_GROUP_NAME" class="form-control" autocomplete="off"></td>
+                <td class="formTitle">婚姻状况</td>
+                <td class="formValue"><input id="MARITAL_STATUS_NAME" name="MARITAL_STATUS_NAME" type="text" class="form-control" autocomplete="off"></td>
+            </tr>
+            <tr>
+                <td colspan="4"><hr></td>
+            </tr>
+            <tr>
+                <td style="height: 40px;"></td>
+                <td style="height: 40px;"></td>
+                <td style="height: 40px;"></td>
+                <td style="height: 40px;">
+                    <button type="button" class="btn btn-success" style="float: right;margin-right: 30px" onclick="btn_save"></button>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+    </form>
+</div>
+</body>
+</html>

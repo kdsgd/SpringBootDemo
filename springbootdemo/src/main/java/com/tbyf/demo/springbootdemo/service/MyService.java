@@ -1,7 +1,7 @@
 package com.tbyf.demo.springbootdemo.service;
 
 import com.tbyf.demo.springbootdemo.dao.AccountDao;
-import com.tbyf.demo.springbootdemo.model.Account;
+import com.tbyf.demo.springbootdemo.entity.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +11,7 @@ import java.util.List;
 public class MyService {
 
     @Autowired
-    AccountDao accountDao;
+    private  AccountDao accountDao;
 
     public List<Account> selectall(){
         return accountDao.selectall();
